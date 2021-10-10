@@ -3,6 +3,10 @@ plugins {
 }
 apply plugin: 'com.google.gms.google-services'
 android {
+    dataBinding {
+        enabled = true
+    }
+
     compileSdk 30
 
     buildFeatures {
@@ -34,6 +38,15 @@ android {
 dependencies {
 //    OTP
     implementation 'com.chaos.view:pinview:1.4.3'
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+
+//    user data
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+
+//    circle Image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    
 //    FireBase
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth'

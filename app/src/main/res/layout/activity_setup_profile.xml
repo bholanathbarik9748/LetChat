@@ -9,27 +9,32 @@
     tools:context=".PhoneNoActivity">
 
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_width="279dp"
+        android:layout_height="274dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/user_logo"
+        app:layout_constraintBottom_toTopOf="@+id/PhoneLebal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/otp_verify" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/PhoneLebal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Verify your phone number"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Profile Information"
         android:textColor="@color/black"
         android:textColorHint="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -39,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="Enter the OTP code to verify your phone number."
+        android:text="Please set your name and an optional profile image."
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/PhoneLebal"
         app:layout_constraintStart_toStartOf="@+id/PhoneLebal"
@@ -64,18 +69,13 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <com.mukesh.OtpView
-                android:id="@+id/otp_view"
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/phoneBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:inputType="number"
-                android:itemBackground="@color/grey"
-                android:focusableInTouchMode="true"
-                app:OtpItemCount="6"
-                app:OtpLineColor="@color/green"
-                app:OtpViewType="line" />
+                android:ems="10"
+                android:hint="Type your Username"
+                android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/continueBtn"

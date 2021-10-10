@@ -13,14 +13,14 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mobile_auth" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/PhoneLebal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -41,9 +41,9 @@
         android:gravity="center"
         android:text="let's Chat will send an SMS message to verify your phone number."
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintEnd_toEndOf="@+id/PhoneLebal"
+        app:layout_constraintStart_toStartOf="@+id/PhoneLebal"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneLebal" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -65,15 +65,15 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/phoneBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Type your Phone Number" />
+                android:hint="Type your phone number"
+                android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/continueBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Continue"
