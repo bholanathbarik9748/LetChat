@@ -10,11 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LetChat">
         <activity
-            android:name=".SetupProfile"
-            android:exported="true" />
+            android:name=".setupprofileActivity"
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".OTPActivity"
-            android:exported="true" />
+            android:exported="true">
+        </activity>
         <activity
             android:name=".PhoneNoActivity"
             android:exported="true">

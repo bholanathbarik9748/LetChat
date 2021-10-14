@@ -5,9 +5,10 @@
       <map>
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/textbox_outline.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_main.xml" value="0.22239583333333332" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_otpactivity.xml" value="0.144" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_otpactivity.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_phone_no.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_setup_profile.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_setupprofile.xml" value="0.24427083333333333" />
       </map>
     </option>
   </component>
@@ -16,5 +17,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.23229166666666667" />
+      </ProjectState>
+    </option>
   </component>
 </project>
