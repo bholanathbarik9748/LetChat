@@ -18,7 +18,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
-import com.google.firebase.database.annotations.Nullable;
 import com.mukesh.OnOtpCompletionListener;
 
 import java.util.concurrent.TimeUnit;
@@ -78,9 +77,11 @@ public class OTPActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            dialog.dismiss();
                             Intent intent = new Intent(OTPActivity.this, setupprofileActivity.class);
                             startActivity(intent);
                         } else {
+                            dialog.dismiss();
                             Toast.makeText(OTPActivity.this, "Failed.", Toast.LENGTH_SHORT).show();
                         }
                     }

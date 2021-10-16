@@ -23,6 +23,14 @@ public class PhoneNoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_phone_no);
         setContentView(binding.getRoot());
 
+        Auth = FirebaseAuth.getInstance();
+
+        if(Auth.getCurrentUser() != null) {
+            Intent intent = new Intent(PhoneNoActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         binding.continueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,5 +39,7 @@ public class PhoneNoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 }
