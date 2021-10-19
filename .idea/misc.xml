@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/dotted.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/ic_call.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/ic_search.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/ic_status.xml" value="0.2484375" />
@@ -12,6 +13,7 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_phone_no.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_setup_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_setupprofile.xml" value="0.24427083333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/row_conversation.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/menu/manu.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/menu/topmanu.xml" value="0.23229166666666667" />
       </map>

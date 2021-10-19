@@ -7,6 +7,17 @@
     android:background="#ffffff"
     tools:context=".MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerVew"
+        android:layout_width="410dp"
+        android:layout_height="666dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/row_conversation"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"

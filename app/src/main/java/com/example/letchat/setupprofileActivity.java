@@ -66,7 +66,7 @@ public class setupprofileActivity extends AppCompatActivity {
                 }
 
                 dialog.show();
-                if (selectedImage != null || selectedImage == null) {
+                if (selectedImage != null) {
                     StorageReference reference = storage.getReference().child("Profiles").child(auth.getUid());
                     reference.putFile(selectedImage).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -76,9 +76,11 @@ public class setupprofileActivity extends AppCompatActivity {
                                     @Override
                                     public void onSuccess(Uri uri) {
                                         String imageUrl = uri.toString();
+
                                         String uid = auth.getUid();
                                         String phone = auth.getCurrentUser().getPhoneNumber();
                                         String name = binding.nameBox.getText().toString();
+
                                         User user = new User(uid, name, phone, imageUrl);
 
                                         database.getReference()
@@ -87,7 +89,7 @@ public class setupprofileActivity extends AppCompatActivity {
                                                 .setValue(user)
                                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
-                                                    public void onSuccess(Void unused) {
+                                                    public void onSuccess(Void aVoid) {
                                                         dialog.dismiss();
                                                         Intent intent = new Intent(setupprofileActivity.this, MainActivity.class);
                                                         startActivity(intent);
@@ -99,6 +101,25 @@ public class setupprofileActivity extends AppCompatActivity {
                             }
                         }
                     });
+                } else {
+                    String uid = auth.getUid();
+                    String phone = auth.getCurrentUser().getPhoneNumber();
+
+                    User user = new User(uid, name, phone, "No Image");
+
+                    database.getReference()
+                            .child("users")
+                            .child(uid)
+                            .setValue(user)
+                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
+                                    dialog.dismiss();
+                                    Intent intent = new Intent(setupprofileActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                            });
                 }
             }
         });
