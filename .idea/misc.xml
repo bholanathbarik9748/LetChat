@@ -3,16 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/circle_bg.xml" value="0.2484375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/circle_green.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/dotted.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/ic_call.xml" value="0.2484375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/ic_chats.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/ic_search.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/ic_status.xml" value="0.2484375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/receive_drawable.xml" value="0.2484375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/send_drawable.xml" value="0.2484375" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/sent_drawable.xml" value="0.2484375" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/drawable/textbox_outline.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_chat_acctivity.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_main.xml" value="0.22239583333333332" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_otpactivity.xml" value="0.264" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_phone_no.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_setup_profile.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/activity_setupprofile.xml" value="0.24427083333333333" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/item_receive.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/item_send.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/layout/row_conversation.xml" value="0.2" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/menu/manu.xml" value="0.23229166666666667" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/LetChat/app/src/main/res/menu/topmanu.xml" value="0.23229166666666667" />

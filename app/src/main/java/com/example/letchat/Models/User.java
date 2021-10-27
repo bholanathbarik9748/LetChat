@@ -1,4 +1,4 @@
-package com.example.letchat;
+package com.example.letchat.Models;
 
 public class User {
     private String uid, name, phoneNumber, profileImage;

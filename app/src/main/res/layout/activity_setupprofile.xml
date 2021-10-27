@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="10dp"
     android:background="#F9F9F9"
-    tools:context=".PhoneNoActivity">
+    tools:context=".Activitys.PhoneNoActivity">
 
 
     <de.hdodenhof.circleimageview.CircleImageView

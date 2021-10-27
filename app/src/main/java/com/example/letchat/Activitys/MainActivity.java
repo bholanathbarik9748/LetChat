@@ -1,4 +1,4 @@
-package com.example.letchat;
+package com.example.letchat.Activitys;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +8,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.letchat.R;
+import com.example.letchat.Models.User;
+import com.example.letchat.Adapters.UserAdapter;
 import com.example.letchat.databinding.ActivityMainBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -1,4 +1,4 @@
-package com.example.letchat;
+package com.example.letchat.Activitys;
 
 import android.app.ProgressDialog;
 import android.content.Intent;

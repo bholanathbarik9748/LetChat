@@ -10,15 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LetChat">
         <activity
-            android:name=".setupprofileActivity"
-            android:exported="true" >
-        </activity>
+            android:name=".Activitys.ChatAcctivity"
+            android:exported="false" />
         <activity
-            android:name=".OTPActivity"
-            android:exported="true">
-        </activity>
+            android:name=".Activitys.setupprofileActivity"
+            android:exported="true"></activity>
         <activity
-            android:name=".PhoneNoActivity"
+            android:name=".Activitys.OTPActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Activitys.PhoneNoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activitys.MainActivity"
             android:exported="true" />
 
         <meta-data
