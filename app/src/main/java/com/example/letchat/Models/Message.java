@@ -6,6 +6,7 @@ public class Message {
     private int feeling = -1;
 
     public Message() {
+
     }
 
     public Message(String message, String senderId, long timestamp) {

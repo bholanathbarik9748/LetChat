@@ -11,11 +11,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.letchat.Activitys.ChatAcctivity;
-import com.example.letchat.R;
 import com.example.letchat.Models.User;
+import com.example.letchat.R;
 import com.example.letchat.databinding.RowConversationBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.userViewHolder> {
 
@@ -37,6 +46,33 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.userViewHolder
     @Override
     public void onBindViewHolder(@NonNull userViewHolder holder, int position) {
         User user = users.get(position);
+
+        String senderId = FirebaseAuth.getInstance().getUid();
+        String senderRoom = senderId + user.getUid();
+
+        FirebaseDatabase.getInstance().getReference()
+                .child("Chats_Section")
+                .child(senderRoom)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()) {
+                            String lastMsg = snapshot.child("lastMsg").getValue(String.class);
+                            long time = snapshot.child("lastMsgTime").getValue(Long.class);
+                            SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm a");
+                            holder.binding.msgTime.setText(dateFormat.format(new Date(time)));
+                            holder.binding.lastMsg.setText(lastMsg);
+                        } else {
+                            holder.binding.lastMsg.setText("Tap to chat");
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
         holder.binding.username.setText(user.getName());
 
         Glide.with(context).load(user.getProfileImage())

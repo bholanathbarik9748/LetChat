@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class ChatAcctivity extends AppCompatActivity {
     ActivityChatAcctivityBinding binding;
@@ -33,7 +34,7 @@ public class ChatAcctivity extends AppCompatActivity {
         binding = ActivityChatAcctivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         messages = new ArrayList<>();
-        adapters = new MessageAdapters(this, messages);
+        adapters = new MessageAdapters(this, messages, senderRoom, receiverRoom);
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerView.setAdapter(adapters);
 
@@ -45,14 +46,15 @@ public class ChatAcctivity extends AppCompatActivity {
         receiverRoom = receiverUID + senderUID;
 
         database = FirebaseDatabase.getInstance();
-        database.getReference().child("Chats_Section")
+        database.getReference()
+                .child("Chats_Section")
                 .child(senderRoom)
                 .child("messages")
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         messages.clear();
-                        for(DataSnapshot snapshot1 : snapshot.getChildren()) {
+                        for (DataSnapshot snapshot1 : snapshot.getChildren()) {
                             Message message = snapshot1.getValue(Message.class);
                             message.setMessageId(snapshot1.getKey());
                             messages.add(message);
@@ -72,12 +74,21 @@ public class ChatAcctivity extends AppCompatActivity {
                 String massageTXT = binding.messageBox.getText().toString();
                 Date date = new Date();
                 Message message = new Message(massageTXT, senderUID, date.getTime());
+                String randomKey = database.getReference().push().getKey();
+
+                HashMap<String, Object> lastMsgObj = new HashMap<>();
+                lastMsgObj.put("lastMsg", message.getMessage());
+                lastMsgObj.put("lastMsgTime", date.getTime());
+
+                database.getReference().child("Chats_Section").child(senderRoom).updateChildren(lastMsgObj);
+                database.getReference().child("Chats_Section").child(receiverRoom).updateChildren(lastMsgObj);
+
                 binding.messageBox.setText("");
                 database.getReference()
                         .child("Chats_Section")
                         .child(senderRoom)
                         .child("messages")
-                        .push()
+                        .child(randomKey)
                         .setValue(message)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -86,7 +97,7 @@ public class ChatAcctivity extends AppCompatActivity {
                                         .child("Chats_Section")
                                         .child(receiverRoom)
                                         .child("messages")
-                                        .push()
+                                        .child(randomKey)
                                         .setValue(message)
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
@@ -94,6 +105,7 @@ public class ChatAcctivity extends AppCompatActivity {
 
                                             }
                                         });
+
                             }
                         });
             }
