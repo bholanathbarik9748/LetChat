@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="5dp">
+    android:layout_marginTop="5dp">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -13,7 +13,8 @@
         android:background="@drawable/send_drawable"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="2dp">
 
         <ImageView
             android:id="@+id/image"
@@ -33,14 +34,14 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp"
             android:text="TextView"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/feeling"
         android:layout_width="16dp"
         android:layout_height="16dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"

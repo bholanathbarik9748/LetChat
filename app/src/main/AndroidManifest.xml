@@ -11,7 +11,8 @@
         android:theme="@style/Theme.LetChat">
         <activity
             android:name=".Activitys.ChatAcctivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.LetChat.NoActionBar"/>
         <activity
             android:name=".Activitys.setupprofileActivity"
             android:exported="true"></activity>

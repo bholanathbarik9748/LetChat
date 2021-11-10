@@ -6,21 +6,20 @@
         <type value="RUNNING_DEVICE_TARGET" />
         <deviceKey>
           <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\ASUS\.android\avd\Pixel_4_XL_API_30.avd" />
+            <type value="SERIAL_NUMBER" />
+            <value value="RZ8M40LJNLH" />
           </Key>
         </deviceKey>
       </Target>
     </runningDeviceTargetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2021-10-29T11:05:37.365731100Z" />
-    <multipleDevicesSelectedInDropDown value="true" />
+    <timeTargetWasSelectedWithDropDown value="2021-11-10T11:55:22.723079800Z" />
     <targetsSelectedWithDialog>
       <Target>
         <type value="QUICK_BOOT_TARGET" />
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\ASUS\.android\avd\Pixel_4_XL_API_30.avd" />
+            <value value="C:\Users\ASUS\.android\avd\Pixel_2_API_30.avd" />
           </Key>
         </deviceKey>
       </Target>
@@ -29,7 +28,7 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\ASUS\.android\avd\Pixel_XL_API_30.avd" />
+            <value value="C:\Users\ASUS\.android\avd\Pixel_4_XL_API_30_1.avd" />
           </Key>
         </deviceKey>
       </Target>

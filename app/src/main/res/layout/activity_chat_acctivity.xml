@@ -16,7 +16,7 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -29,8 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-
-                app:tint="#ffffff" />
+                android:tint="#ffffff"
+                app:srcCompat="@drawable/ic_left_arrow" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile"
@@ -50,7 +50,7 @@
                     android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="USERNAME"
+                    android:text="Mian Asad Ali"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -74,13 +74,12 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
-        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sendBtn"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginLeft="5dp">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,8 +113,7 @@
                 android:layout_height="16dp"
                 android:layout_marginRight="12dp"
                 app:srcCompat="@drawable/ic_camera"
-                app:tint="#676767"
-                tools:ignore="VectorDrawableCompat" />
+                app:tint="#676767" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -127,16 +125,14 @@
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <ImageView
         android:id="@+id/sendBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/circle_green"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
