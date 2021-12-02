@@ -1,4 +1,4 @@
 # LetChat
 
 
-blob:https://drive.google.com/drive/my-drive
+https://drive.google.com/file/d/1nJ7-ELLhugoZjXeOMHpBgiLZ_4911y0O/view?usp=sharing
